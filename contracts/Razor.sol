@@ -9,7 +9,7 @@ import "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol";
  * `ERC20` functions.
  */
 
-contract SchellingCoin is ERC20{
+contract Razor is ERC20{
     /**
      * @dev Constructor that gives msg.sender all of existing tokens.
      */
