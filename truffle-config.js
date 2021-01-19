@@ -56,7 +56,25 @@ module.exports = {
             network_id: 420
             // websockets: true
         },
-
+        live: {
+          provider: () => new HDWalletProvider(mnemonic, `https://mainnet.infura.io/v3/${infuraKey}`), // `${infuraKey}`),
+          network_id: 1,
+          // gas: 7000000,
+          confirmations: 3,
+          timeoutBlocks: 200,
+          skipDryRun: true // Skip dry run before migrations? (default: false for public nets )
+           // optional config values:
+           // gas
+           // gasPrice
+           // from - default address to use for any transaction Truffle makes during migrations
+           // provider - web3 provider instance Truffle should use to talk to the Ethereum network.
+           //          - function that returns a web3 provider instance (see below.)
+           //          - if specified, host and port are ignored.
+           // skipDryRun: - true if you don't want to test run the migration locally before the actual migration (default is false)
+           // timeoutBlocks: - if a transaction is not mined, keep waiting for this number of blocks (default is 50)
+           // deploymentPollingInterval: - duration between checks for completion of deployment transactions
+           // disableConfirmationListener: - true to disable web3's confirmation listener
+         },
         // Useful for deploying to a public network.
         // NB: It's important to wrap the provider as a function.
         // actually we are using rinkeby not ropsten
