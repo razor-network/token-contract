@@ -13,7 +13,7 @@ contract Razor is ERC20{
     /**
      * @dev Constructor that gives msg.sender all of existing tokens.
      */
-    constructor (uint256 initialSupply) public ERC20("RAZOR", "RZR") {
+    constructor (uint256 initialSupply) public ERC20("RAZOR", "RAZOR") {
         _mint(msg.sender, initialSupply);
     }
 
